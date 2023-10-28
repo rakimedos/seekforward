@@ -93,9 +93,9 @@ function handleHotkeys(player: VideoJsPlayer, event: videojs.KeyboardEvent) {
     player.abLoopPlugin.setOptions(opts);
   }
 
-  let seekFactor = 10;
+  let seekFactor = 5;
   if (event.shiftKey) {
-    seekFactor = 5;
+    seekFactor = 10;
   } else if (event.ctrlKey || event.altKey) {
     seekFactor = 60;
   }
@@ -357,8 +357,8 @@ export const ScenePlayer: React.FC<IScenePlayerProps> = ({
         persistVolume: {},
         bigButtons: {},
         seekButtons: {
-          forward: 10,
-          back: 10,
+          forward: 5,
+          back: 5,
         },
         skipButtons: {},
         trackActivity: {},
